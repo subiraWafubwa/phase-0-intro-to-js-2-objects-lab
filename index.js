@@ -10,8 +10,8 @@ function updateEmployeeWithKeyAndValue(employee, key, value) {
     console.log('      Update Non-Destructively       ');
     console.log('*************************************');
 
-    const newEmployee = { ...employee };
     console.log(`Before Update: ${newEmployee.name}`);
+    const newEmployee = { ...employee };
     newEmployee[key] = value;
     console.log(`After Update: ${newEmployee.name}`);
     return newEmployee;
@@ -37,9 +37,7 @@ function deleteFromEmployeeByKey(employee, key) {
     console.log('        Delete by Employee Key       ');
     console.log('*************************************');
 
-    let newEmployee = {};
-    console.log(`Before Declaration: ${newEmployee.name}`);
-    newEmployee = { ...employee };
+    let newEmployee = { ...employee };
     console.log(`Before Delete: ${newEmployee.name}`);
     delete newEmployee[key];
     console.log(`Before Update: ${newEmployee.name}`);
